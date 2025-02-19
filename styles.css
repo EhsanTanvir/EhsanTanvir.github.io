@@ -1,0 +1,81 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+
+/* Home Section */
+#home {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Portfolio Section */
+#portfolio .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#portfolio .card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+#portfolio .card-body {
+    padding: 20px;
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact .form-label {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
