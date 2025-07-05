@@ -1,118 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tanvirul Ehasan | SQA Engineer</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #333; color: #fff; padding: 20px 0; text-align: center; }
-    section { max-width: 900px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; }
-    h1, h2 { color: #333; }
-    ul { list-style-type: none; padding: 0; }
-    li { padding: 5px 0; }
-    .contact span { font-weight: bold; }
-  </style>
-</head>
-<body>
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  background: #f8f9fb;
+  color: #333;
+}
 
-<header>
-  <h1>Tanvirul Ehasan</h1>
-  <p>SQA Engineer | Python Developer | Tech Enthusiast</p>
-</header>
+header {
+  background: linear-gradient(135deg, #007cf0, #00dfd8);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
 
-<section>
-  <h2>Contact Information</h2>
-  <div class="contact">
-    <p><span>Email:</span> <a href="mailto:Ehsantanvir23@gmail.com">Ehsantanvir23@gmail.com</a></p>
-    <p><span>Phone:</span> +8801521110671</p>
-    <p><span>Address:</span> 38/8, Mayakannon, Shobujbag, Dhaka</p>
-    <p><span>LinkedIn:</span> <a href="https://linkedin.com/in/ehsanTanvir">linkedin.com/in/ehsanTanvir</a></p>
-    <p><span>GitHub:</span> <a href="https://github.com/EhsanTanvir">github.com/EhsanTanvir</a></p>
-  </div>
-</section>
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
 
-<section>
-  <h2>Profile</h2>
-  <p>Motivated IT professional seeking long-term career growth in a dynamic, stable environment. Quick learner with a strong focus on teamwork, problem-solving, and continuous improvement. Committed to achieving excellence and ensuring quality.</p>
-</section>
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
 
-<section>
-  <h2>Education</h2>
-  <ul>
-    <li><strong>M.Sc. in Machine Learning</strong>, Daffodil International University (2022-2024)</li>
-    <li><strong>B.Sc. in Computer Science</strong>, Jagannath University (2017-2021) — CGPA: 2.77</li>
-    <li><strong>B.Sc. in Computer Science</strong>, Daffodil International University — CGPA: 3.04</li>
-    <li><strong>HSC</strong>, National Ideal College — GPA: 5.00</li>
-    <li><strong>SSC</strong>, Motijheel Model High School — GPA: 5.00</li>
-  </ul>
-</section>
+nav {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>Languages: Python, HTML, CSS</li>
-    <li>Frameworks: Django, Pytest</li>
-    <li>Testing Tools: Selenium, JMeter, Postman</li>
-    <li>Databases: MySQL, PostgreSQL</li>
-    <li>Project Tools: Jira, Zabbix, Observium, LibreNMS</li>
-    <li>Others: MS Office, Google Sheets</li>
-  </ul>
-</section>
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+}
 
-<section>
-  <h2>Work Experience</h2>
-  <h3>SQA Engineer – Tappware Solutions Ltd (2023–Present)</h3>
-  <ul>
-    <li>Manual testing, bug tracking (Jira), API & Load testing (Postman, JMeter)</li>
-    <li>System monitoring & client support</li>
-    <li>iOS and Android mobile testing</li>
-  </ul>
-  
-  <h3>Executive – Nimble Code Execution System Ltd (2021–2022)</h3>
-  <ul>
-    <li>Client support, technical documentation, QA testing</li>
-    <li>On-site server and MySQL setup</li>
-  </ul>
+nav li {
+  margin: 0 15px;
+}
 
-  <h3>Assistant IT Executive – Hotel Shuktara (2020)</h3>
-  <ul>
-    <li>Maintained IT infrastructure, hardware, and software systems</li>
-    <li>Provided technical support to staff and guests</li>
-  </ul>
-</section>
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>D-Nothi (a2i Programme)</strong> — Digital Govt. document management for 23,000 offices</li>
-    <li><strong>PMS (UK)</strong> — Accounting Practice Management System <br><a href="https://app.prac-sys.co.uk/login">app.prac-sys.co.uk/login</a></li>
-    <li><strong>BSEC IPO Portal</strong> — <a href="https://bsec-ipo-test.tappware.com">bsec-ipo-test.tappware.com</a></li>
-    <li><strong>NICE Software</strong> — Hotel management system (Bangladesh)</li>
-  </ul>
-</section>
+nav a:hover {
+  color: #007cf0;
+}
 
-<section>
-  <h2>Interests</h2>
-  <ul>
-    <li>Travelling, Reading Books, Sports, Exploring New Technologies, Teamwork</li>
-  </ul>
-</section>
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
 
-<section>
-  <h2>Languages</h2>
-  <ul>
-    <li>English (Fluent)</li>
-    <li>Bangla (Native)</li>
-  </ul>
-</section>
+h2 {
+  margin-bottom: 15px;
+  color: #007cf0;
+}
 
-<section>
-  <h2>Reference</h2>
-  <p><strong>Ejaz Ahmed</strong><br>
-  SQA Manager at Tappware Solutions Ltd<br>
-  Email: ejaz@tappware.com</p>
-</section>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
 
-</body>
-</html>
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay {
+  transition-delay: 0.3s;
+}
