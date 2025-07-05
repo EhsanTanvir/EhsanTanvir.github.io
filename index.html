@@ -4,196 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tanvirul Ehasan | SQA Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f2f5;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
-      color: #fff;
-      padding: 60px 20px 40px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section {
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: 0.3s ease;
-    }
-    section:hover {
-      transform: translateY(-4px);
-    }
-    h2 {
-      border-left: 6px solid #00bfff;
-      padding-left: 12px;
-      margin-bottom: 15px;
-      color: #111;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .two-column {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .two-column > div {
-      flex: 1;
-      min-width: 280px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      section {
-        padding: 20px;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>Tanvirul Ehasan</h1>
-  <p>SQA Engineer | Python Developer | Tech Enthusiast</p>
-</header>
-
-<div class="container">
-
-  <section>
-    <h2>Contact</h2>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:Ehsantanvir23@gmail.com">Ehsantanvir23@gmail.com</a></li>
-      <li><strong>Phone:</strong> +8801521110671</li>
-      <li><strong>Address:</strong> 38/8, Mayakannon, Shobujbag, Dhaka</li>
-      <li><strong>GitHub:</strong> <a href="https://github.com/EhsanTanvir">github.com/EhsanTanvir</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ehsantanvir">linkedin.com/in/ehsantanvir</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Profile</h2>
-    <p>Motivated IT professional seeking long-term career growth in a dynamic, stable environment. Strong in QA, Python, automation, teamwork, and modern tools. Committed to quality, learning, and leadership.</p>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <div class="two-column">
-      <div>
-        <p><strong>M.Sc. in Machine Learning</strong><br>Daffodil International University (2022–2024)</p>
-        <p><strong>B.Sc. in CSE</strong><br>Jagannath University (2017–2021)<br>CGPA: 2.77</p>
-      </div>
-      <div>
-        <p><strong>B.Sc. in CSE</strong><br>Daffodil International University<br>CGPA: 3.04</p>
-        <p><strong>HSC:</strong> National Ideal College — GPA 5.00<br>
-           <strong>SSC:</strong> Motijheel Model High School — GPA 5.00</p>
-      </div>
+  <header>
+    <div class="container">
+      <h1 class="fade-in">Tanvirul Ehasan</h1>
+      <p class="fade-in delay">SQA Engineer | Python Developer | Tester</p>
     </div>
-  </section>
+  </header>
 
-  <section>
-    <h2>Skills</h2>
+  <nav>
     <ul>
-      <li><strong>Languages:</strong> Python, HTML, CSS</li>
-      <li><strong>Frameworks:</strong> Django, Pytest</li>
-      <li><strong>Tools:</strong> JMeter, Selenium, Postman</li>
-      <li><strong>Monitoring:</strong> Zabbix, LibreNMS, Observium</li>
-      <li><strong>Project Management:</strong> Jira, MS Excel, Google Sheets</li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <section>
-    <h2>Work Experience</h2>
-    <p><strong>SQA Engineer – Tappware Solutions Ltd (2023–Present)</strong></p>
-    <ul>
-      <li>Manual, API, and load testing using Selenium, JMeter, Postman</li>
-      <li>Bug tracking with Jira and system monitoring</li>
-      <li>Client support and mobile app QA (Android/iOS)</li>
-    </ul>
+  <main class="container">
 
-    <p><strong>Executive – Nimble Code Execution System (2021–2022)</strong></p>
-    <ul>
-      <li>Client requirements, support, MySQL configuration, deployment</li>
-    </ul>
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">Python, Django</div>
+        <div class="card">Postman, Selenium</div>
+        <div class="card">JMeter, PyTest</div>
+        <div class="card">Bug Tracking (Jira)</div>
+        <div class="card">Linux, MySQL, PostgreSQL</div>
+        <div class="card">Zabbix, LibreNMS</div>
+      </div>
+    </section>
 
-    <p><strong>Assistant IT Executive – Hotel Shuktara (2020)</strong></p>
-    <ul>
-      <li>Managed property-wide IT systems, network, hardware/software</li>
-    </ul>
-  </section>
+    <section id="projects" class="fade-in">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>D-Nothi</h3>
+          <p>Govt. e-filing software with 23,000+ offices.</p>
+        </div>
+        <div class="card">
+          <h3>PMS (UK)</h3>
+          <p>Practice Management System for accounting firms.</p>
+        </div>
+        <div class="card">
+          <h3>BSEC IPO</h3>
+          <p>Bangladesh Securities & Exchange IPO submission portal.</p>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>D-Nothi:</strong> Govt. doc mgmt system (23,000+ offices)</li>
-      <li><strong>PMS (UK):</strong> <a href="https://app.prac-sys.co.uk/login">Practice Management System</a></li>
-      <li><strong>BSEC IPO:</strong> <a href="https://bsec-ipo-test.tappware.com">IPO Application Portal</a></li>
-      <li><strong>NICE Software:</strong> Hotel Management System</li>
-    </ul>
-  </section>
+    <section id="experience" class="fade-in">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Tappware Solutions (2023–Now):</strong> SQA Engineer – Manual & API Testing, Jira, JMeter</li>
+        <li><strong>Nimble Code (2021–2022):</strong> Executive – QA, server setup, MySQL support</li>
+        <li><strong>Hotel Shuktara (2020):</strong> IT Executive – System support and network handling</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Languages & Interests</h2>
-    <ul>
-      <li><strong>Languages:</strong> English (Fluent), Bangla (Native)</li>
-      <li><strong>Interests:</strong> Travelling, Reading Books, Sports, Exploring Tech, Teamwork</li>
-    </ul>
-  </section>
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:Ehsantanvir23@gmail.com">Ehsantanvir23@gmail.com</a></p>
+      <p><strong>Phone:</strong> +8801521110671</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/EhsanTanvir">github.com/EhsanTanvir</a></p>
+    </section>
 
-  <section>
-    <h2>Reference</h2>
-    <p><strong>Ejaz Ahmed</strong><br>
-      SQA Manager, Tappware Solutions Ltd<br>
-      Email: ejaz@tappware.com
-    </p>
-  </section>
+  </main>
 
-</div>
+  <footer>
+    <p>&copy; 2025 Tanvirul Ehasan. All rights reserved.</p>
+  </footer>
 
-<footer>
-  &copy; 2025 Tanvirul Ehasan. All rights reserved.
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
