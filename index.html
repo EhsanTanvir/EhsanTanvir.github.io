@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Tanvirul Ehasan Portfolio</title>
+  <link rel="icon" type="image/png" href="images/head4.jpg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+  <!-- Core CSS libs (kept from your original template) -->
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/ionicons.min.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/icomoon.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    :root {
+      --brand: #52e766;
+      --bg: #030303; 
+      --panel: #111;
+      --text: #fff;
+      --muted: rgba(255, 255, 255, 0.7);
+    }
+
+    html,
+    body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ============ SIDEBAR ============ */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 280px;
+      background: linear-gradient(180deg, #161616, #0f0f0f);
+      border-right: 1px solid rgba(255, 255, 255, .06);
+      padding: 28px 22px;
+      z-index: 1030;
+      overflow-y: auto;
+      transition: transform .25s ease;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid var(--brand);
+    }
+
+    .brand .name {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .brand .role {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand .role .icon {
+      color: var(--brand);
+    }
+
+    .sidebar .nav {
+      list-style: none;
+      padding-left: 0;
+      margin: 18px 0 26px;
+    }
+
+    .sidebar .nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      margin: 4px 0;
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      opacity: .9;
+    }
+
+    .sidebar .nav a .icon {
+      width: 18px;
+      display: inline-grid;
+      place-items: center;
+      opacity: .9;
+    }
+
+    .sidebar .nav a:hover,
+    .sidebar .nav a.active {
+      background: #1a1a1a;
+      opacity: 1;
+      color: var(--brand);
+    }
+
+    .sidebar .nav a:hover .icon,
+    .sidebar .nav a.active .icon {
+      color: var(--brand);
+    }
+
+    .quick-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #222;
+      font-weight: 600;
+    }
+
+    .sidebar .social {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .sidebar .social a {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: #1a1a1a;
+      color: #fff;
+      opacity: .9;
+    }
+
+    .sidebar .social a:hover {
+      opacity: 1;
+      color: var(--brand);
+    }
+
+    /* ============ MOBILE MENU BUTTON + OFF-CANVAS ============ */
+    .hamburger {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      z-index: 1100;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: #141414;
+      color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .hamburger .bar {
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      position: relative;
+    }
+
+    .hamburger .bar::before,
+    .hamburger .bar::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+    }
+
+    .hamburger .bar::before {
+      top: -6px;
+    }
+
+    .hamburger .bar::after {
+      top: 6px;
+    }
+
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 1025;
+      display: none;
+    }
+
+    /* ============ MAIN CONTENT ============ */
+    .content {
+      margin-left: 280px;
+    }
+
+    .section {
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .section .lead {
+      color: var(--muted);
+    }
+
+    h1.big,
+    h2.section-title {
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    h2.section-title {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 96px 24px 64px;
+      background: radial-gradient(80% 80% at 20% 0%, rgba(255, 189, 57, .12), transparent 50%);
+    }
+
+    .hero .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero .title {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .hero .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      background: #101010;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .btn-brand {
+      background: var(--brand);
+      color: #111;
+      font-weight: 700;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: #141414;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+    }
+
+    /* Typing effect */
+    #typing {
+      font-weight: 800;
+      color: var(--brand);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--brand);
+      animation: cursor .8s step-end infinite;
+    }
+
+    @keyframes cursor {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* Cards & grids */
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+      height: 100%;
+    }
+
+    .card h3 {
+      margin: 4px 0 8px;
+    }
+
+    /* Timeline + Education logos */
+    .timeline {
+      border-left: 3px solid var(--brand);
+      padding-left: 18px;
+    }
+
+    .timeline .item {
+      margin-bottom: 22px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .timeline .date {
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .edu-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: #1a1a1a;
+      flex-shrink: 0;
+    }
+
+    .edu-body {
+      display: block;
+    }
+
+    /* Experience cards */
+    .exp-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .exp-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      background: #1a1a1a;
+    }
+
+    .exp-body h4 {
+      margin: 0;
+    }
+
+    .exp-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 4px 0 8px;
+    }
+
+    /* About photo */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      background: #101010;
+    }
+
+    /* Project tiles */
+    .project {
+      display: block;
+      background: #141414;
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #fff;
+      transition: transform .2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project .p-body {
+      padding: 14px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 4px 8px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+
+    /* Certification */
+    .cert {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .cert img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #1a1a1a;
+    }
+
+    .cert-thumb {
+      width: 96px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: #0f0f0f;
+    }
+
+    /* Contact + validation */
+    .form-control {
+      background: #101010;
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: #fff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      width: 100%;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-row.two {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .error {
+      display: none;
+      color: #ff6b6b;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .invalid {
+      border-color: #ff6b6b !important;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 24px;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      color: var(--muted);
+      background: linear-gradient(180deg, rgba(255, 189, 57, .06), transparent 40%);
+    }
+
+    footer .foot-wrap {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer .foot-wrap .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--brand);
+      display: inline-block;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .content {
+        margin-left: 0;
+      }
+
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .backdrop.show {
+        display: block;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero {
+        padding-top: 84px;
+      }
+
+      .hero .hero-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-img {
+        height: 240px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row.two {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- MOBILE MENU BUTTON + BACKDROP -->
+<button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+  <span class="bar"></span>
+</button>
+
+<!-- BACKDROP -->
+<div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+
+  <!-- =========== SIDEBAR (Profile + Nav) =========== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <img src="images/Profile.jpg" alt="Profile" />
+      <div>
+        <div class="name">Tanvirul Ehasan</div>
+        <div class="role"><span class="icon icon-briefcase"></span>SQA Engineer</div>
+      </div>
+    </div>
+
+    <!-- Quick Badges directly under profile -->
+    <span class="site-slogan">
+      Manual Testing | Automation | API Testing | Mobile
+    </span>
+
+    <ul class="nav" id="sideNav">
+      <li><a class="active" href="#home"><span class="icon icon-home"></span>Home</a></li>
+      <li><a href="#about"><span class="icon icon-user"></span>About</a></li>
+      <li><a href="#skills"><span class="icon icon-wrench"></span>Skills</a></li>
+      <li><a href="#services"><span class="icon icon-layers"></span>Services</a></li>
+      <li><a href="#education"><span class="icon icon-graduation-cap"></span>Education</a></li>
+      <li><a href="#experience"><span class="icon icon-briefcase"></span>Experience</a></li>
+      <li><a href="#PROJECT Experience "><span class="ion-ios-briefcase"></span>Projects Experience</a></li>
+      <li><a href="#certifications"><span class="ion-ios-ribbon"></span>Certifications</a></li>
+      <li><a href="#contact"><span class="icon icon-envelope"></span>Contact</a></li>
+    </ul>
+
+    <div class="social">
+      <a href="http://www.linkedin.com/in/ehsantanvir0723" target="_blank" aria-label="LinkedIn"><span
+          class="icon-linkedin"></span></a>
+      <a href="https://github.com/EhsanTanvir/" target="_blank" aria-label="GitHub"><span class="icon-github"></span></a>
+      <a href="https://wa.me/+8801533927793" target="_blank" aria-label="WhatsApp"><span
+          class="icon-whatsapp"></span></a>
+      <a href="https://t.me/@TanjuroT" target="_blank" aria-label="Telegram"><span class="icon-telegram"></span></a>
+    </div>
+  </aside>
+
+
+  <!-- =========== MAIN CONTENT =========== -->
+  <main class="content">
+    <!-- HERO -->
+   <!-- HERO SECTION -->
+<section id="home" class="hero-section">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-container">
+    <!-- Left Text -->
+    <div class="hero-text">
+      <div class="intro">Hello 👋</div>
+      <h1 class="hero-title">
+        I'm <span class="highlight">Tanvirul Ehasan</span>, 
+        <span id="typing">SQA Engineer</span>
+      </h1>
+      <p class="hero-desc">
+        I work to improve software by planning tests carefully, exploring features with real curiosity, and automating where it makes testing smarter and faster.
+        I focus on catching issues early and communicating insights clearly so teams can deliver stable and user-friendly products.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://drive.google.com/file/d/1drR-zLeEhKYc9wPEuKq5cZZu-9ajjw1H/view?usp=drive_link" 
+           target="_blank" class="btn btn-brand">Download Cv</a>
+        <a href="#contact" class="btn btn-ghost">Hire Me</a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="hero-image">
+      <img src="images/Profile.jpg" alt="Tanvirul Ehasan">
+    </div>
+  </div>
+</section>
+
+<!-- Typing Animation -->
+<script>
+const roles = ["SQA Engineer", "Automation QA Engineer","QA Tester", "Software Quality Engineer", "Manual Tester"];
+let index = 0, charIndex = 0, current = "", typing = true;
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  if (typing) {
+    if (charIndex < roles[index].length) {
+      current += roles[index][charIndex++];
+      typingElement.textContent = current;
+      setTimeout(typeEffect, 120);
+    } else {
+      typing = false;
+      setTimeout(typeEffect, 1200);
+    }
+  } else {
+    if (charIndex > 0) {
+      current = current.slice(0, --charIndex);
+      typingElement.textContent = current;
+      setTimeout(typeEffect, 60);
+    } else {
+      typing = true;
+      index = (index + 1) % roles.length;
+      setTimeout(typeEffect, 200);
+    }
+  }
+}
+typeEffect();
+</script>
+
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-sub">Who I am & How I Work</p>
+
+    <div class="card about-card">
+      <!-- Left -->
+      <div class="about-left">
+        <div class="about-image">
+          <img src="images/about-me20.png" alt="Tanvirul Ehasan" />
+        </div>
+        <p class="about-intro">
+          Hi 👋 I’m  <strong> Tanvirul Ehasan </strong>, a detail-driven  <strong>SQA Engineer </strong> who loves making software feel stable, smooth, and frustration-free. 
+          <em>I use modern QA practices, clear communication, and thoughtful testing to help teams ship products that real users can trust.</em>
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div class="about-right">
+        <div class="about-details">
+          <div class="detail"><span>Role: </span> SQA Engineer</div>
+          <div class="detail"><span>Location: </span> 38/8,Mayakannon,Shobujbag, Dhaka</div>
+          <div class="detail"><span>Testing: </span>Functional, Regression, API, Mobile, Smoke, Performance</div>
+          <div class="detail"><span>Tools : </span> Selenium, Pytest, JMeter, Postman, Jira, TestRail, Git</div>
+          <div class="detail"><span>Programming : </span> Selenium, Pytest, JMeter, Postman, Jira, TestRail, Git, ML</div>
+          <div class="detail"><span>Mobile: </span> Android (Manual)</div>
+          <div class="detail"><span>Databases/OS </span> MySQL, Windows, Linux</div>
+          <div class="detail"><span>Soft Skills: </span> Communication, Problem-Solving, Teamwork</div>
+      
+        </div>
+        <div class="about-links">
+          <a class="btn-brand" href="https://www.linkedin.com/in/ehsantanvir0723/" target="_blank">
+            <span></span> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-sub">Core strengths at a glance</p>
+
+    <div class="grid grid-3">
+
+      <div class="card">
+        <div class="skill-header">
+          <div class="skill-icon" aria-label="Manual Testing icon">
+            <svg viewBox="0 0 24 24" fill="none">
+  <rect x="3" y="7" width="18" height="12" rx="3"
+    stroke="currentColor" stroke-width="1.7"/>
+  <path d="M7 13l2 2 3-4 3 3 2-3"
+    stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </div>
+          <h3>Manual Testing</h3>
+        </div>
+        <p class="lead">Checking features step-by-step, creating test cases, finding bugs, and making sure everything works as expected</p>
+        <div class="quick-badges">
+          <span class="tag">Web</span><span class="tag">Mobile</span><span class="tag">Regression</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skill-header">
+          <div class="skill-icon" aria-label="Automation icon">
+            <svg viewBox="0 0 24 24" fill="none">
+  <rect x="3" y="4" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/>
+  <path d="M8 2h8m-4 16v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="9" y="6" width="6" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+</svg>
+
+          </div>
+          <h3>Automation</h3>
+        </div>
+        <p class="lead">Writing simple automated tests with Selenium and Python to repeat important checks faster..</p>
+        <div class="quick-badges">
+          <span class="tag">Selenium</span><span class="tag">Python</span><span class="tag">java</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skill-header">
+          <div class="skill-icon" aria-label="API Testing icon">
+           <svg viewBox="0 0 24 24" fill="none">
+  <path d="M12 3l2 3h4l1 2-3 3 1 4-3 2-3-2-3 2-3-2 1-4-3-3 1-2h4l2-3z"
+    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>
+
+
+          </div>
+          <h3>API Testing</h3>
+        </div>
+        <p class="lead">Sending API requests, checking responses, and making sure the backend is working properly.</p>
+        <div class="quick-badges">
+          <span class="tag">Postman</span><span class="tag">REST</span><span class="tag">Auth</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skill-header">
+          <div class="skill-icon" aria-label="Test Management icon">
+            <svg viewBox="0 0 24 24" fill="none">
+  <rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.7"/>
+  <path d="M9 4v16M3 10h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="6.5" cy="8" r="1" fill="currentColor"/>
+  <circle cx="6.5" cy="14" r="1" fill="currentColor"/>
+</svg>
+
+          </div>
+          <h3>Test Management</h3>
+        </div>
+        <p class="lead">Organizing test cases, tracking bugs, and keeping testing work clear and easy to follow.</p>
+        <div class="quick-badges">
+          <span class="tag">JIRA</span><span class="tag">TestRail</span><span class="tag">Confluence</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skill-header">
+          <div class="skill-icon" aria-label="Mobile QA icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="7" y="2.8" width="10" height="18.4" rx="2" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="18.8" r="1.1" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Mobile QA</h3>
+        </div>
+        <p class="lead">Testing apps on different phones, checking crashes, and reviewing logs to understand issues.</p>
+        <div class="quick-badges">
+          <span class="tag">Device Matrix</span><span class="tag">Crash Logs</span><span class="tag">App Lifecycle</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skill-header">
+          <div class="skill-icon" aria-label="Data and Tools icon">
+            <svg viewBox="0 0 24 24" fill="none">
+  <ellipse cx="12" cy="6" rx="7" ry="3.2" stroke="currentColor" stroke-width="1.7"/>
+  <path d="M5 6v10c0 1.9 3.1 3.1 7 3.1s7-1.2 7-3.1V6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+</svg>
+
+          </div>
+          <h3>Data & Tools</h3>
+        </div>
+        <p class="lead">Using basic SQL, Git, and analytics to support testing work.</p>
+        <div class="quick-badges">
+          <span class="tag">SQL</span><span class="tag">Data Query</span><span class="tag">Git</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- SERVICES -->
+  <section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">How I can help your team</p>
+
+    <div class="grid grid-3" id="serviceGrid">
+      <!-- Visible 3 cards -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="images/web-testing1.jpg" alt="Web Testing">
+        </div>
+        <div class="service-info">
+          <h3>Web Testing (Manual + Automation)</h3>
+          <p>End-to-end, regression, and cross-browser testing with clear reports and reproducible steps.</p>
+          <a href="#" class="read-more">Read more </a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="images/mobile-app-testing-1.jpg" alt="Mobile App Testing">
+        </div>
+        <div class="service-info">
+          <h3>Mobile App Testing (Manual)</h3>
+          <p>Functional, usability, and device coverage testing on Android with detailed documentation.</p>
+          <a href="#" class="read-more">Read more </a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="images/qa-docs.png" alt="QA Documentation">
+        </div>
+        <div class="service-info">
+          <h3>QA Documentation (Manual + Automation)</h3>
+          <p>Test plans, test cases, checklists, bug reports, and release notes aligned to requirements.</p>
+          <a href="#" class="read-more">Read more </a>
+        </div>
+      </div>
+
+      <!-- Hidden 3 cards -->
+      <div class="service-card hidden-service">
+        <div class="service-img">
+          <img src="images/api-testing.png" alt="API Testing">
+        </div>
+        <div class="service-info">
+          <h3>API Testing</h3>
+          <p>Postman/Newman collections, schema checks, contract validation, and smoke suites for pipelines.</p>
+          <a href="#" class="read-more">Read more </a>
+        </div>
+      </div>
+
+      <div class="service-card hidden-service">
+        <div class="service-img">
+          <img src="images/qa-support.jpg" alt="QA Support">
+        </div>
+        <div class="service-info">
+          <h3>QA Support</h3>
+          <p>Sprint support, story grooming, acceptance criteria review, and daily triage with engineering and product teams.</p>
+          <a href="#" class="read-more">Read more </a>
+        </div>
+      </div>
+
+      <div class="service-card hidden-service">
+        <div class="service-img">
+          <img src="images/cicd.png" alt="CI/CD Readiness">
+        </div>
+        <div class="service-info">
+          <h3>CI/CD Readiness</h3>
+          <p>Basic automation hooks, artifacts (reports/screens), and pass/fail gates integrated into pipelines.</p>
+          <a href="#" class="read-more">Read more  </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- See more / less button -->
+    <div class="see-more-wrapper">
+      <button id="seeMoreBtn" class="see-more-btn">See More ↓</button>
+      <button id="seeLessBtn" class="see-more-btn" style="display:none;">See Less ↑</button>
+    </div>
+  </div>
+</section>
+<script>
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+  const seeLessBtn = document.getElementById("seeLessBtn");
+  const hiddenCards = document.querySelectorAll(".hidden-service");
+
+  seeMoreBtn.addEventListener("click", function () {
+    hiddenCards.forEach(card => {
+      card.style.display = "block";
+    });
+    seeMoreBtn.style.display = "none";
+    seeLessBtn.style.display = "inline-block";
+  });
+
+  seeLessBtn.addEventListener("click", function () {
+    hiddenCards.forEach(card => {
+      card.style.display = "none";
+    });
+    seeLessBtn.style.display = "none";
+    seeMoreBtn.style.display = "inline-block";
+    window.scrollTo({ top: document.getElementById("services").offsetTop - 50, behavior: "smooth" });
+  });
+</script>
+
+ <!-- EDUCATION (with logos) -->
+ <!-- EDUCATION (with logos + transparent backgrounds) -->
+<section class="section" id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+
+      <!-- 🎓 Jagannath University -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <a href="https://www.jagannath.edu.bd/" target="_blank" title="Jagannath University ">
+            <img src="images/jagannath.png" alt="Jagannath University" />
+          </a>
+        </div>
+        <div class="timeline-content gub-bg">
+          <span class="date">2022 – 2024</span>
+          <h4>M.Sc. in Computer Science &amp; Engineering (CSE)</h4>
+          <p>Jagannath University — <b>CGPA: 2.78</b></p>
+        </div>
+      </div>
+
+      <!-- 🎓 Daffodil International University -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <a href="https://www.green.edu.bd/" target="_blank" title="Daffodil International University ">
+            <img src="images/green.png" alt="Daffodil International University" />
+          </a>
+        </div>
+        <div class="timeline-content gub-bg">
+          <span class="date">2017 – 2021</span>
+          <h4>B.Sc. in Computer Science &amp; Engineering (CSE)</h4>
+          <p>Daffodil International University — <b>CGPA: 3.04</b></p>
+        </div>
+      </div>
+
+      <!-- 🎓 National Ideal Collage  -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <a href="https://www.bafsd.edu.bd/" target="_blank" title="Visit National Ideal Collage , Dhaka">
+            <img src="images/BAF.png" alt="National Ideal Collage " />
+          </a>
+        </div>
+        <div class="timeline-content baf-bg">
+          <span class="date">2014 – 2016</span>
+          <h4>Higher Secondary Certificate</h4>
+          <p>National Ideal Collage , Dhaka — <b>GPA: 5.00</b></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+     <!-- 🔹 TAPPWARE SOLUTIONS LIMITED| Dhaka|-->
+         <div class="timeline-item exp-card">
+  <div class="timeline-icon">
+    <a href="https://tappware.com/" target="_blank" rel="noopener">
+      <img class="exp-logo" src="images/tapp.jpg" alt="TAPPWARE SOLUTIONS LIMITED" />
+    </a>
+  </div>
+  <div class="timeline-content exp-body">
+    <h4>QA Tester — TAPPWARE SOLUTIONS LIMITED </h4>
+    <div class="exp-meta">Jan 2023 – Present · Dhaka (On-site)</div>
+    <ul>
+      <li>Worked in an Agile and Scrum environment, participating in sprint planning and daily stand-ups.</li>
+      <li> Designed and developed detailed test cases, use cases, and documentation to ensure high-quality software releases.</li>
+      <li>Designed and executed manual, API, and performance tests using Postman and JMeter.</li>
+      <li> Managed and tracked defects using Jira, ensuring timely resolution and effective communication with development teams..</li>
+      <li> Implemented system monitoring tools to identify and resolve issues proactively.</li>
+       <li>  Prepared test plans, reports, and documentation to summarize test coverage and results.</li>
+        <li>  Provided technical support and collaborated with clients to improve software quality and user satisfaction..</li>
+         <li>  Performed mobile application testing on iOS and Android platforms to verify performance and usability</li>
+    
+
+    </ul>
+  </div>
+</div>
+
+
+      <!-- 🔹 Nimble Code Execution System LTD -->
+      <div class="timeline-item exp-card">
+        <div class="timeline-icon">
+          <a href="https://www.facebook.com/nicesoftwareltd/about/?_rdr" target="_blank" rel="noopener">
+            <img class="exp-logo" src="images/nice.png" alt="Nimble Code Execution System LTD" />
+          </a>
+        </div>
+        <div class="timeline-content exp-body">
+          <h4> Executive at Analyst Department  — Nimble Code Execution System LTD</h4>
+          <div class="exp-meta">Dec 2021 – Dec 2022 · Dhaka (On-site)</div>
+          <ul>
+            <li>Resolved complex technical issues for clients, ensuring timely and effective solutions.</li>
+            <li>User requirements into detailed technical specifications for system development.</li>
+            <li>Delivered comprehensive support services, including troubleshooting and optimizing system operations.</li>
+            <li>Conducted client training sessions to ensure effective use and understanding of software applications..</li>
+            <li>Performed thorough software quality assurance and testing to maintain system integrity and performance..</li>
+            <li>Visited client sites to set up servers and configure MySQL databases to support software deployment and integration.</li>
+
+               
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- 🔹 Assistance IT Executive -->
+      <div class="timeline-item exp-card">
+        <div class="timeline-icon">
+          <a href="https://hotelshuktara.com/" target="_blank" rel="noopener">
+            <img class="exp-logo" src="images/logo.png" alt="Hotel Shuktara" />
+          </a>
+        </div>
+        <div class="timeline-content exp-body">
+          <h4>Assistance IT Executive — Hotel Shuktara</h4>
+          <div class="exp-meta">Jan 2020  – March 2020 · Dhaka (Site)</div>
+          <ul>
+            <li>Manage and maintain the overall IT infrastructure of the property, including network connectivity, hardware, software, databases, and other related systems. .</li>
+            <li>Ensure all systems are secure and operational. </li>
+            <li>Respond to IT-related issues and requests </li>
+            <li>Learning automation testing (Selenium, JUnit, etc.).</li>
+            <li>Provide technical support and assistance to guests and staff.</li>
+             
+
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Highlighting hands-on projects that demonstrate my testing and automation expertise</p>
+
+    <div class="grid grid-3">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <a href="https://github.com/EhsanTanvir" class="icon-link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <img src="images/ux.jpg" alt="QA Web" />
+        <div class="project-overlay">
+          <h4> D-Nothi  ||  Aspire to Innovate (a2i) Programme</h4>
+          <p class="lead"> D-Nothi is the application of information and communication technology (ICT) for delivering government services, exchange of information, communication transactions, integration of various stand alone systems and services between government-to-citizen, government-to-business, government-to-government.</p>
+          <div class="tag-box">
+            <span class="tag">Selenium</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">CI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <a href="https://github.com/EhsanTanvir" class="icon-link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <img src="images/tapware.jpg" alt="PMS" />
+        <div class="project-overlay">
+          <h4> PMS (Practice Management System) ||  United Kingdom</h4>
+          <p class="lead">An Accounting Practice Management System (PMS) streamlines front and back office operations for accounting firms by organizing services and tracking task  delivery through workflows and task management.
+ An accounting consulting software that helps the consulting firm to manage
+ their clients requests and provide service.</p>
+          <div class="tag-box">
+            <span class="tag">Postman</span>
+            <span class="tag">Newman</span>
+            <span class="tag">Swagger</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <a href="https://github.com/EhsanTanvir" class="icon-link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <img src="images/mobile.jpg" alt="QA Mobile" />
+        <div class="project-overlay">
+          <h4>IPO Application Process Bangladesh Securities and Exchange Commission </h4>
+          <p class="lead">The Bangladesh Securities Exchange Commission regulates the capital market and
+ safeguards shareholders' interests by channeling savings into companies through
+ IPOs, contributing to economic growth. </p>
+          <div class="tag-box">
+            <span class="tag">Android</span>
+            <span class="tag">ADB</span>
+            <span class="tag">Logcat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+   
+
+    <div class="project-btn">
+      <a class="btn-ghost" href="https://github.com/EhsanTanvir" target="_blank">More on GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CERTIFICATIONS (unchanged layout + certificate image thumbnail) -->
+ <!-- ===== CERTIFICATIONS SECTION ===== -->
+<section class="section" id="certifications">
+  <div class="container">
+    <h2 class="section-title">Certifications</h2>
+
+    <!-- Filter Tabs -->
+    <div class="cert-filter">
+      <button class="filter-btn active" data-category="all">All Certifications & Courses</button>
+      <button class="filter-btn" data-category="web">Web</button>
+      <button class="filter-btn" data-category="app">App</button>
+      <button class="filter-btn" data-category="programming">Programming</button>
+      <button class="filter-btn" data-category="other">Other</button>
+    </div>
+
+    <!-- Certificate Grid -->
+    <div class="cert-grid">
+      <!-- Card 1 -->
+      <div class="cert-card" data-category="SQA">
+        <img src="images/ostadC.png" alt="SQA: Manual & Automated Testing" />
+        <div class="cert-info">
+          <h3>SQA: Manual & Automated Testing </h3>
+          <p>By Ostad</p>
+          <span class="view-btn">+</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="cert-card" data-category="AI">
+        <img src="images/Introduction to JIRA.png" alt="Python with Machine Learning" />
+        <div class="cert-info">
+          <h3>Python with Machine Learning </h3>
+          <p>Conducted by Jagannath University Under EDGE Project by BCC ,ICT Division </p>
+x          <span class="view-btn">+</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="cert-card" data-category="programming">
+        <img src="images/Introduction to API Testing with Postman.jpeg" alt="Workshop on python" />
+        <div class="cert-info">
+          <h3>Workshop on python</h3>
+          <p>By DIT </p>
+          <span class="view-btn">+</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="cert-card" data-category="web">
+        <img src="images/API Testing and Basic Overview of JMeter.png" alt="Traning On Machine Learning" />
+        <div class="cert-info">
+          <h3>Traning On Machine Learning</h3>
+          <p>Hire and Train Program Under IIT Univeristy of Dhaka </p>
+          <span class="view-btn">+</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="cert-card" data-category="web">
+        <img src="images/SQA Basic Course.jpg" alt="Full Stack Python with Django" />
+        <div class="cert-info">
+          <h3>Full Stack Python with Django</h3>
+          <p> Daffodil International Academy (DIT)</p>
+          <span class="view-btn">+</span>
+        </div>
+      </div>
+
+  
+
+      <!-- Extra Cards for Load More -->
+      <div class="cert-card hidden" data-category="other">
+        <img src="images/WD.jpg" alt="21st Century Employability Skilling Program – Advance Level" />
+        <div class="cert-info">
+          <h3>21st Century Employability Skilling Program – Advance Level</h3>
+          <p>By Wadhwani Foundation</p>
+          <span class="view-btn">+</span>
+        </div>
+      </div>
+
+     
+
+    <!-- Load Buttons -->
+    <div class="load-more-container">
+      <button id="loadMoreBtn">Load more</button>
+      <button id="loadLessBtn" class="hidden">Load less</button>
+    </div>
+  </div>
+
+  <!-- Inline Script -->
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const certCards = document.querySelectorAll('.cert-card');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const loadLessBtn = document.getElementById('loadLessBtn');
+    let visibleCards = 6;
+
+    // Filter function
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        visibleCards = 6;
+        updateVisibleCards();
+      });
+    });
+
+    // Load more
+    loadMoreBtn.addEventListener('click', () => {
+      visibleCards += 6;
+      updateVisibleCards();
+    });
+
+    // Load less
+    loadLessBtn.addEventListener('click', () => {
+      visibleCards = 6;
+      updateVisibleCards();
+      window.scrollTo({ top: document.getElementById('certifications').offsetTop, behavior: 'smooth' });
+    });
+
+    // Update cards
+    function updateVisibleCards() {
+      const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+      let shownCount = 0;
+
+      certCards.forEach(card => {
+        const match = activeCategory === 'all' || card.dataset.category === activeCategory;
+        if (match && shownCount < visibleCards) {
+          card.classList.remove('hidden');
+          shownCount++;
+        } else if (match) {
+          card.classList.add('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      const visibleCategoryCards = Array.from(certCards).filter(
+        c => activeCategory === 'all' || c.dataset.category === activeCategory
+      );
+      const allShown = shownCount >= visibleCategoryCards.length;
+
+      loadMoreBtn.style.display = allShown ? 'none' : 'inline-block';
+      loadLessBtn.classList.toggle('hidden', visibleCards <= 6);
+    }
+
+    updateVisibleCards();
+  </script>
+</section>
+
+
+
+
+    <!-- CONTACT (with validation) -->
+  <section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Let's build something reliable together</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <!-- Add name="" attributes for EmailJS -->
+        <form id="contactForm" novalidate>
+          <div class="form-row two">
+            <div>
+              <input class="form-control" type="text" id="name" name="from_name" placeholder="Your Name" />
+              <div class="error" id="err-name" style="display:none; color:red">Please enter your name.</div>
+            </div>
+            <div>
+              <input class="form-control" type="email" id="email" name="from_email" placeholder="Email" />
+              <div class="error" id="err-email" style="display:none; color:red">Please enter a valid email (e.g., name@example.com).</div>
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:10px">
+            <div>
+              <input class="form-control" type="text" id="subject" name="subject" placeholder="Subject" />
+              <div class="error" id="err-subject" style="display:none; color:red">Please enter a subject.</div>
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:10px">
+            <div>
+              <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+              <div class="error" id="err-message" style="display:none; color:red">Please enter your message.</div>
+            </div>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <button type="submit" class="btn-brand">Send Message</button>
+            <a class="btn-ghost" href="https://forms.gle/nJxadRR1mTdqTCAZ6" target="_blank">Google Form</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Reach Me</h3>
+        <p class="lead">Mayakannon, Sobujbag , Dhaka ,Bangladesh</p>
+        <p><span class="icon-phone2"></span> 
+          <a href="tel://01533927793" style="color:#fff">+8801533927793</a>
+        </p>
+        <p><span class="icon-paper-plane"></span> 
+          <a href="mailto:ehsantanvir23@gmail.com" style="color:#fff">
+            ehsantanvir23@gmail.com
+          </a>
+        </p>
+
+        <!-- ✅ Google Map Embed with Marked -->
+       
+<div style="margin-top:12px; border-radius:10px; overflow:hidden; text-align:center;">
+  <h4 style="margin-bottom:6px; color:#00bfff;">Google Map Location</h4>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3645408788975!2d90.42733441148054!3d23.73437648930132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b840c220ad2d%3A0xa7b34da36160d68c!2sMayakanon%20Rd%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1763113578824!5m2!1sen!2sbd"
+    width="100%"
+    height="200"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  <div style="text-align:center; margin-top:6px;">
+    <a
+      href="https://www.google.com/maps/place/Mayakanon+Rd,+Dhaka/@23.7329317,90.4290156,1698m/data=!3m1!1e3!4m6!3m5!1s0x3755b840c220ad2d:0xa7b34da36160d68c!8m2!3d23.7343716!4d90.4299147!16s%2Fg%2F1ydnv25g7!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MTExMS4wIKXMDSoASAFQAw%3D%3D"
+      target="_blank"
+      style="color:#00bfff; text-decoration:underline;">
+      View larger map
+    </a>
+  </div>
+</div>
+
+
+
+        <div class="social" style="margin-top:8px">
+          <a href="https://www.facebook.com/arafin.tanjiro" target="_blank"><span class="icon-facebook"></span></a>
+          <a href="https://www.instagram.com/ehsan__tanvir/" target="_blank"><span class="icon-instagram"></span></a>
+          <a href="https://www.linkedin.com/in/ehsantanvir0723" target="_blank"><span class="icon-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+<script>
+  //Keys 
+  const EMAILJS_PUBLIC_KEY = "Qr6QQF8SNPgNtItyk";
+  const EMAILJS_SERVICE_ID = "service_uw6bona";
+  const EMAILJS_TEMPLATE_ID = "template_h4ebjsp";
+
+  // Init
+  (function(){
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  })();
+
+  // Validation function
+  function validateForm() {
+    let valid = true;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Name
+    if (!name) {
+      document.getElementById("err-name").style.display = "block";
+      valid = false;
+    } else {
+      document.getElementById("err-name").style.display = "none";
+    }
+
+    // Email (regex)
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email || !emailPattern.test(email)) {
+      document.getElementById("err-email").style.display = "block";
+      valid = false;
+    } else {
+      document.getElementById("err-email").style.display = "none";
+    }
+
+    // Subject
+    if (!subject) {
+      document.getElementById("err-subject").style.display = "block";
+      valid = false;
+    } else {
+      document.getElementById("err-subject").style.display = "none";
+    }
+
+    // Message
+    if (!message) {
+      document.getElementById("err-message").style.display = "block";
+      valid = false;
+    } else {
+      document.getElementById("err-message").style.display = "none";
+    }
+
+    return valid;
+  }
+
+  // Form submit
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return; // Stop if invalid
+    }
+
+    const submitBtn = form.querySelector("button[type='submit']");
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    // Send form
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+      .then(function(response) {
+        alert("✅ Message sent successfully!");
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }, function(error) {
+        console.error("EmailJS Error:", error);
+        alert("❌ Failed to send message. Try again later.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      });
+  });
+</script>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container foot-wrap">
+        <div class="footer-left">
+          <p>©
+            <script>document.write(new Date().getFullYear());</script>
+            <strong>Tanvirul Ehasan</strong> — All rights reserved.
+          </p>
+          <p class="tagline">Shaped with precision, built for lasting Reliability</p>
+        </div>
+        <div class="footer-right">
+          <a href="http://www.linkedin.com/in/ehsantanvir0723" target="_blank" aria-label="LinkedIn"><span
+              class="icon-linkedin"></span></a>
+          <a href="https://github.com/EhsanTanvir/" target="_blank" aria-label="GitHub"><span
+              class="icon-github"></span></a>
+          <a href="https://wa.me/+8801533927793" target="_blank" aria-label="WhatsApp"><span
+              class="icon-whatsapp"></span></a>
+          <a href="https://t.me/TanjuroT" target="_blank" aria-label="Telegram"><span class="icon-telegram"></span></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+
+  <!-- JS (kept minimal; original libs still loaded for compatibility) -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script>
+    // Simple typing effect content
+    const titles = ["SQA Engineer", "Manual & API Testing", "Automation Learner", "Quality First"];
+    let ti = 0, ci = 0;
+    const el = document.getElementById('typing');
+    function type() {
+      if (!el) return;
+      if (ci <= titles[ti].length) {
+        el.textContent = titles[ti].substring(0, ci++);
+        setTimeout(type, 120);
+      } else {
+        setTimeout(() => { ci = 0; ti = (ti + 1) % titles.length; type(); }, 1200);
+      }
+    }
+    type();
+
+    // Smooth scroll + active link highlight
+    const links = document.querySelectorAll('.sidebar .nav a');
+    links.forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if (!target) return;
+        window.scrollTo({ top: target.offsetTop - 10, behavior: 'smooth' });
+        // close drawer on mobile after navigating
+        closeDrawer();
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const fromTop = window.scrollY + 20;
+      links.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (!section) return;
+        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ===== Mobile drawer logic (menu button; nav stays same, just collapses) =====
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('backdrop');
+
+    function openDrawer() {
+      sidebar.classList.add('open');
+      backdrop.classList.add('show');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      sidebar.classList.remove('open');
+      backdrop.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      if (sidebar.classList.contains('open')) closeDrawer(); else openDrawer();
+    });
+    backdrop.addEventListener('click', closeDrawer);
+
+    // ===== Contact form validation (blocks send unless all valid) =====
+    const form = document.getElementById('contactForm');
+    const nameEl = document.getElementById('name');
+    const emailEl = document.getElementById('email');
+    const subjectEl = document.getElementById('subject');
+    const messageEl = document.getElementById('message');
+
+    const errs = {
+      name: document.getElementById('err-name'),
+      email: document.getElementById('err-email'),
+      subject: document.getElementById('err-subject'),
+      message: document.getElementById('err-message')
+    };
+
+    function showError(el, errNode) {
+      el.classList.add('invalid');
+      errNode.style.display = 'block';
+    }
+    function clearError(el, errNode) {
+      el.classList.remove('invalid');
+      errNode.style.display = 'none';
+    }
+    function isEmail(v) {
+      // Simple but solid email pattern
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    [nameEl, emailEl, subjectEl, messageEl].forEach(input => {
+      input.addEventListener('input', () => {
+        const id = input.id;
+        if (id === 'email') {
+          if (input.value.trim() && isEmail(input.value.trim())) clearError(input, errs[id]);
+        } else {
+          if (input.value.trim()) clearError(input, errs[id]);
+        }
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let ok = true;
+
+      if (!nameEl.value.trim()) { showError(nameEl, errs.name); ok = false; } else { clearError(nameEl, errs.name); }
+      if (!emailEl.value.trim() || !isEmail(emailEl.value.trim())) { showError(emailEl, errs.email); ok = false; } else { clearError(emailEl, errs.email); }
+      if (!subjectEl.value.trim()) { showError(subjectEl, errs.subject); ok = false; } else { clearError(subjectEl, errs.subject); }
+      if (!messageEl.value.trim()) { showError(messageEl, errs.message); ok = false; } else { clearError(messageEl, errs.message); }
+
+      if (!ok) return; // Block sending unless everything is valid
+
+      // Build mailto with the validated fields
+      const to = 'ehsantanvir23@gmail.com';
+      const subject = encodeURIComponent(subjectEl.value.trim());
+      const bodyLines = [
+        `Name: ${nameEl.value.trim()}`,
+        `Email: ${emailEl.value.trim()}`,
+        '',
+        'Message:',
+        messageEl.value.trim()
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+
+      // Open user's email client
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.getElementById("sidebar");
+  const backdrop = document.getElementById("backdrop");
+
+  hamburger.addEventListener("click", () => {
+    const isOpen = sidebar.classList.toggle("open");
+    backdrop.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
+
+  backdrop.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    backdrop.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+  });
+</script>
+
+</body>
+
+</html>
