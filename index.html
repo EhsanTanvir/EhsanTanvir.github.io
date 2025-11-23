@@ -1109,11 +1109,13 @@ typeEffect();
   </div>
 </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
+  <!-- PROJECTS -->
+<section class="section" id="projects">
   <div class="container">
     <h2 class="section-title">Projects</h2>
-    <p class="section-sub">Highlighting hands-on projects that demonstrate my testing and automation expertise</p>
+    <p class="section-sub">
+      Highlighting hands-on projects that demonstrate my testing and automation expertise
+    </p>
 
     <div class="grid grid-3">
       <!-- Project 1 -->
@@ -1123,8 +1125,10 @@ typeEffect();
         </a>
         <img src="images/ux.jpg" alt="QA Web" />
         <div class="project-overlay">
-          <h4> D-Nothi  ||  Aspire to Innovate (a2i) Programme</h4>
-          <p class="lead"> D-Nothi is the application of information and communication technology (ICT) for delivering government services, exchange of information, communication transactions, integration of various stand alone systems and services between government-to-citizen, government-to-business, government-to-government.</p>
+          <h4>D-Nothi || Aspire to Innovate (a2i) Programme</h4>
+          <p class="lead">
+            D-Nothi is the application of information and communication technology...
+          </p>
           <div class="tag-box">
             <span class="tag">Selenium</span>
             <span class="tag">Playwright</span>
@@ -1140,10 +1144,10 @@ typeEffect();
         </a>
         <img src="images/tapware.jpg" alt="PMS" />
         <div class="project-overlay">
-          <h4> PMS (Practice Management System) ||  United Kingdom</h4>
-          <p class="lead">An Accounting Practice Management System (PMS) streamlines front and back office operations for accounting firms by organizing services and tracking task  delivery through workflows and task management.
- An accounting consulting software that helps the consulting firm to manage
- their clients requests and provide service.</p>
+          <h4>PMS (Practice Management System) || United Kingdom</h4>
+          <p class="lead">
+            An Accounting Practice Management System (PMS) streamlines operations...
+          </p>
           <div class="tag-box">
             <span class="tag">Postman</span>
             <span class="tag">Newman</span>
@@ -1159,10 +1163,10 @@ typeEffect();
         </a>
         <img src="images/mobile.jpg" alt="QA Mobile" />
         <div class="project-overlay">
-          <h4>IPO Application Process Bangladesh Securities and Exchange Commission </h4>
-          <p class="lead">The Bangladesh Securities Exchange Commission regulates the capital market and
- safeguards shareholders' interests by channeling savings into companies through
- IPOs, contributing to economic growth. </p>
+          <h4>IPO Application Process Bangladesh SEC</h4>
+          <p class="lead">
+            The Bangladesh Securities Exchange Commission regulates the capital market...
+          </p>
           <div class="tag-box">
             <span class="tag">Android</span>
             <span class="tag">ADB</span>
@@ -1171,13 +1175,31 @@ typeEffect();
         </div>
       </div>
     </div>
-    
 
+    <!-- HIDDEN PROJECTS (Project 4) -->
+    <div id="more-projects" class="grid grid-3 hidden-projects">
+      <div class="project-card">
+        <a href="https://ehsantanvir.github.io/Emergency-Gas-Fire-Detection-Drone/" class="icon-link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <img src="images/unnamed.jpg" alt="QA Mobile" />
+        <div class="project-overlay">
+          <h4>Emergency Gas & Fire Detection Drone</h4>
+          <p class="lead">
+            An intelligent safety drone for industrial hazard detection and early warning...
+          </p>
+          <div class="tag-box">
+            <span class="tag">IoT</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">Drone</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-   
-
+    <!-- SHOW MORE BUTTON -->
     <div class="project-btn">
-      <a class="btn-ghost" href="https://github.com/EhsanTanvir" target="_blank">More on GitHub</a>
+  <button class="btn-ghost" id="showMoreBtn">Show More</button>
     </div>
   </div>
 </section>
@@ -1695,6 +1717,19 @@ x          <span class="view-btn">+</span>
     backdrop.classList.remove("active");
     hamburger.setAttribute("aria-expanded", "false");
   });
+</script>
+<script>
+document.getElementById("showMoreBtn").addEventListener("click", function () {
+  const hiddenSection = document.getElementById("more-projects");
+
+  if (hiddenSection.style.display === "grid") {
+    hiddenSection.style.display = "none";
+    this.textContent = "Show More";
+  } else {
+    hiddenSection.style.display = "grid";
+    this.textContent = "Show Less";
+  }
+});
 </script>
 
 </body>

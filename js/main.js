@@ -270,6 +270,19 @@
   });
 
 
+document.getElementById("showMoreBtn").addEventListener("click", function () {
+  const hiddenProjects = document.getElementById("more-projects");
+
+  if (hiddenProjects.style.display === "grid") {
+    hiddenProjects.style.display = "none";
+    this.textContent = "Show More";
+  } else {
+    hiddenProjects.style.display = "grid";
+    this.textContent = "Show Less";
+  }
+});
+
+
 
 
 

@@ -10,6 +10,10 @@ $darken: #232931;
 $primary: #ffbd39;
 $secondary: #a0f669;
 
+.hidden-projects {
+  display: none;
+}
+
 
 
 @mixin border-radius($radius) {
@@ -329,6 +333,7 @@ h1, h2, h3, h4, h5,
 	font-size: 24px;
 	text-transform: uppercase;
 }
+
 
 
 .hero{
